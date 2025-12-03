@@ -8,3 +8,5 @@ def test_home_page():
     with app.test_client() as client:
         response = client.get('/')
         assert response.status_code == 200
+
+        # Check if the code word
