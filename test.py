@@ -1,5 +1,6 @@
 import pytest
-from app import app 
+from app import app
+ 
 def test_app_exists():
     """Test that the app exists"""
     assert app is not None
