@@ -45,9 +45,9 @@ jobs:
         run: |
           docker build -t ${{ env.IMAGE_NAME }} .
 
-      - name: Tag image    # Tag image for ECR
+      - name: Tag Docker image    # Tag image for ECR
         run: |
-          docker tag {{ env.IMAGE_NAME }}:latest  ${{ env.ECR_REPO }}:latest
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ env.ECR_REPO }}:latest
 
 
       - name: Run Trivy vulnerability scanner   # Scan image with TRIVY
