@@ -41,8 +41,8 @@ jobs:
         id: ecr-login
         uses: aws-actions/amazon-ecr-login@v2
 
-
-      - name: Build Docker image      # Build Docker image
+              # Build Docker image
+      - name: Build Docker image      
         run: |
           docker build -t ${{ env.IMAGE_NAME }} .
 
